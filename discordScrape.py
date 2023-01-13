@@ -19,7 +19,7 @@ def retrieve_messages(channelid):
     #          Password will need to be reset prior to login
     #          This is to prevent unauthorized access for outside users
     # ------------------------------------------------------------------------------------
-    #          Workaround: empty authorization parameter prior to pushing
+    #          Workaround: comment out authorization parameter prior to pushing
     #                      use auth code ONLY for testing session
     # ------------------------------------------------------------------------------------
 
