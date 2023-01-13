@@ -21,6 +21,7 @@ def retrieve_messages(channelid):
     # ------------------------------------------------------------------------------------
     #          Workaround: comment out authorization parameter prior to pushing
     #                      use auth code ONLY for testing session
+    #                      same auth code can be reused as long as password wasn't reset
     # ------------------------------------------------------------------------------------
 
     headers = {
