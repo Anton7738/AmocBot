@@ -14,11 +14,18 @@ def retrieve_messages(channelid):
     Step 8: Scroll down to "Request Headers" > "authorization"
     Step 9: Copy and paste code into parameter below
     """ 
-    # WARNING: After usage, Discord may log you out as connection may be "unstable"
+    # ------------------------------------------------------------------------------------
+    # WARNING: Once code is pushed to GitHub, Discord will sign out user and request login
+    #          Password will need to be reset prior to login
+    #          This is to prevent unauthorized access for outside users
+    # ------------------------------------------------------------------------------------
+    #          Workaround: empty authorization parameter prior to pushing
+    #                      use auth code ONLY for testing session
+    # ------------------------------------------------------------------------------------
 
     headers = {
                         # insert code here
-        'authorization': 'NzAzMTY4MTY2NzE2NTA2MjQy.GkXbVh.UsYAD3i5hA72qpiEwfdDaNFvrGDGSCyGZ8F4EU'
+        'authorization': ' '
     }
 
     r = requests.get(f'https://discord.com/api/v9/channels/{channelid}/messages', headers = headers)
