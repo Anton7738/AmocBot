@@ -25,7 +25,7 @@ def retrieve_messages(channelid):
 
     headers = {
                         # insert code here
-        'authorization': ' '
+        'authorization': ''
     }
 
     r = requests.get(f'https://discord.com/api/v9/channels/{channelid}/messages', headers = headers)
@@ -37,6 +37,8 @@ def retrieve_messages(channelid):
     for value in jsonn:
         if (value['author']['username']) == 'amoc':
             print(value['content'], '\n')
+
+    # some code added after using and emptying auth code
 
 def main():
     retrieve_messages('1051059403287175198') 
