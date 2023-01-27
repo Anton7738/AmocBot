@@ -4,6 +4,8 @@ import json
 import doctest
 import unittest
 
+# Maybe a global variable with the data?
+
 def retrieve_messages(channelid):
     """
     Authorization code will need to be changed before local usage
@@ -46,9 +48,18 @@ def retrieve_messages(channelid):
 
     #print(amocMessagesBuffer)
 
-    # open AmocMessages.txt
-    # Write to file if not already there
+    # open AmocMessages.txt for appending and reading, creating file if it doesn't exist
+    fd = open("AmocMessages.txt", "a+")
+    
+    # Go through line by line in messagesBuffer
+    for x in amocMessagesBuffer:
+        # Check if the current buffer message is not in AmocMessages.txt
+        if not amocMessagesBuffer[x] in fd.read():
+            # If not in AmocMessages.txt, append to the .txt file
+            fd.write(amocMessagesBuffer[x] + "\n")
     # close
+
+    fd.close()
 
     """
     Before:
