@@ -31,7 +31,7 @@ def retrieve_messages(channelid):
 
     headers = {
                         # insert code here
-        'authorization': 'MjQ1Njc3NzA0MzkxODE5MjY1.GHbWf3.qF35n6dcmkAHOa6HC1QdATbARY5df0O5aClbk4'
+        'authorization': ''
     }
 
     r = requests.get(f'https://discord.com/api/v9/channels/{channelid}/messages', headers = headers)
